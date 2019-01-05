@@ -100,3 +100,8 @@ HeapSort : 0.028 S<br/>
 
 <h3>Summary:</h3><br/>
 Accoring to the analysis above, the most common used sorting algorithms is quick sort(3 ways).<br/>
+
+<strong>
+  See more analyses:<br/>
+  http://note.youdao.com/noteshare?id=afa74cc3942c8e00e6d31304cac2e069&sub=E7A44982BC064D0AAF3FD632A5DE309A
+</strong>
