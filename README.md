@@ -71,7 +71,7 @@ QuickSort3Ways : 0.029 S<br/>
 HeapSortSlow1 : 0.044 S<br/>
 HeapSortSlow2 : 0.044 S<br/>
 HeapSort : 0.043 S<br/>
-
+<br/>
 <strong>200 random integer elements in 100000 size sorted array</strong><br/>
 SelectSort : 12.703 S<br/>
 InsertSort : 0.008 S<br/>
