@@ -84,7 +84,7 @@ QuickSort3Ways : 0.022 S<br/>
 HeapSortSlow1 : 0.047 S<br/>
 HeapSortSlow2 : 0.032 S<br/>
 HeapSort : 0.029 S<br/>
-
+<br/>
 <strong>A large of equal elements in random elements from 0 to 10 in 100000 size array</strong><br/>
 SelectSort : 12.501 S<br/>
 InsertSort : 6.637 S<br/>
@@ -97,7 +97,7 @@ QuickSort3Ways : 0.005 S<br/>
 HeapSortSlow1 : 0.031 S<br/>
 HeapSortSlow2 : 0.031 S<br/>
 HeapSort : 0.028 S<br/>
-
+<br/>
 <h3>Summary:</h3><br/>
 Accoring to the analysis above, the most common used sorting algorithms is quick sort(3 ways).<br/>
 
