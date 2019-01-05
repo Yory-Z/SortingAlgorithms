@@ -1,10 +1,10 @@
 <table>
   <tr>
-    <td>Algorithms Name</td>
-    <td>Average Time Complexity</td>
-    <td>Sorting in itself</td>
-    <td>Space Complexity</td>
-    <td>Stability</td>
+    <th>Algorithms Name</th>
+    <th>Average Time Complexity</th>
+    <th>Sorting in itself</th>
+    <th>Space Complexity</th>
+    <th>Stability</th>
   </tr>
   <tr>
     <td>Selection Sort</td>
@@ -57,7 +57,7 @@
   </tr>
 </table>
 
-time cause analysis:<br/>
+<h2>Time cause analysis:</h2><br/>
 100000 random integer elements from 0 to 100000<br/>
 SelectSort : 12.632 S<br/>
 InsertSort : 7.479 S<br/>
@@ -71,7 +71,7 @@ HeapSortSlow1 : 0.044 S<br/>
 HeapSortSlow2 : 0.044 S<br/>
 HeapSort : 0.043 S<br/>
 
-200 random integer elements in 100000 size sorted array<br/>
+<strong>200 random integer elements in 100000 size sorted array</strong><br/>
 SelectSort : 12.703 S<br/>
 InsertSort : 0.008 S<br/>
 BubbleSort : 13.251 S<br/>
@@ -84,7 +84,7 @@ HeapSortSlow1 : 0.047 S<br/>
 HeapSortSlow2 : 0.032 S<br/>
 HeapSort : 0.029 S<br/>
 
-A large of equal elements in random elements from 0 to 10 in 100000 size array<br/>
+<strong>A large of equal elements in random elements from 0 to 10 in 100000 size array</strong><br/>
 SelectSort : 12.501 S<br/>
 InsertSort : 6.637 S<br/>
 BubbleSort : 53.194 S<br/>
@@ -97,5 +97,5 @@ HeapSortSlow1 : 0.031 S<br/>
 HeapSortSlow2 : 0.031 S<br/>
 HeapSort : 0.028 S<br/>
 
-Summary:<br/>
+<h2>Summary:</h2><br/>
 Accoring to the analysis above, the most common used sorting algorithms is quick sort(3 ways).<br/>
