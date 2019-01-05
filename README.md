@@ -1,3 +1,4 @@
+<h3>Complexity</h3>
 <table>
   <tr>
     <th>Algorithms Name</th>
@@ -57,8 +58,8 @@
   </tr>
 </table>
 
-<h2>Time cause analysis:</h2><br/>
-100000 random integer elements from 0 to 100000<br/>
+<h3>Time cause analysis:</h3><br/>
+<strong>100000 random integer elements from 0 to 100000</strong><br/>
 SelectSort : 12.632 S<br/>
 InsertSort : 7.479 S<br/>
 BubbleSort : 56.399 S<br/>
@@ -97,5 +98,5 @@ HeapSortSlow1 : 0.031 S<br/>
 HeapSortSlow2 : 0.031 S<br/>
 HeapSort : 0.028 S<br/>
 
-<h2>Summary:</h2><br/>
+<h3>Summary:</h3><br/>
 Accoring to the analysis above, the most common used sorting algorithms is quick sort(3 ways).<br/>
