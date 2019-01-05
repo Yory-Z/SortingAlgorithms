@@ -1,7 +1,11 @@
 entire ayalysis:
+
 Algorithms Name    Average Time Complexity   Sorting in itself   Space Complexity   Stability
+
 Selection                 Sort O(n2)               √                    O(1)           √
+
 Insertion                 Sort O(n2)               √                    O(1)           √
+
 Bubble                    Sort O(n2)               √                    O(1)           √
 Shell                     Sort O(nlgn)             √                    O(1)           √
 Merge Sort                O(nlgn)                  ×                    O(n)           √
@@ -9,6 +13,7 @@ Quick                     Sort O(nlgn)             √                    O(lgn)
 Heap Sort                 O(nlgn)                  √                    O(1)           ×
 
 time cause analysis:
+
 100000 random integer elements from 0 to 100000
 SelectSort : 12.632 S
 InsertSort : 7.479 S
@@ -23,10 +28,15 @@ HeapSortSlow2 : 0.044 S
 HeapSort : 0.043 S
 
 200 random integer elements in 100000 size sorted array
+
 SelectSort : 12.703 S
+
 InsertSort : 0.008 S
+
 BubbleSort : 13.251 S
+
 ShellSort : 0.009 S
+
 MergeSort : 0.002 S
 QuickSort1(Unbalanced) : 0.013 S
 QuickSort2 : 0.006 S
