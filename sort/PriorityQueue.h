@@ -2,6 +2,13 @@
 // Created by Yory on 2019/1/5.
 //
 
+
+/*
+ * Priority queue
+ *
+ *
+ * */
+
 #ifndef SORTINGALGORITHMS_MAXHEAPSLOW_H
 #define SORTINGALGORITHMS_MAXHEAPSLOW_H
 
@@ -10,14 +17,15 @@
 #include "../util/ArrayHelper.h"
 
 template <typename T>
-class MaxHeapSlow {
+class PriorityQueue {
 public:
-    static void HeapSort1(T *arr, int n);
-    static void HeapSort2(T *arr, int n);
+    void testPriorityQueue();
+    void HeapSort1(T* arr, int n);
+    void HeapSort2(T* arr, int n);
 
-    explicit MaxHeapSlow(int capacity = 100);
-    explicit MaxHeapSlow(T *arr, int n);
-    ~MaxHeapSlow();
+    PriorityQueue(int capacity = 100);
+    PriorityQueue(T *arr, int n);
+    ~PriorityQueue();
 
     void Insert(T item);
     T ExtractMax();
@@ -32,8 +40,26 @@ private:
 };
 
 template <typename T>
-void MaxHeapSlow<T>::HeapSort1(T *arr, int n) {
-    MaxHeapSlow<T> maxHeap = MaxHeapSlow<T>(n);
+void PriorityQueue<T>::testPriorityQueue() {
+    int n = 10;
+    srand(time(NULL));
+    PriorityQueue<T> queue = PriorityQueue<T>(n);
+    for (int i = 0; i < n; ++i) {
+        int temp = rand() % n;
+        cout<<temp<<' ';
+        queue.Insert(temp);
+    }
+    cout<<endl;
+
+    while (!queue.IsEmpty()){
+        cout<<queue.ExtractMax()<<' ';
+    }
+    cout<<endl;
+}
+
+template <typename T>
+void PriorityQueue<T>::HeapSort1(T *arr, int n) {
+    PriorityQueue<T> maxHeap = PriorityQueue<T>(n);
     for (int i = 0; i < n; ++i) {
         maxHeap.Insert(arr[i]);
     }
@@ -44,21 +70,21 @@ void MaxHeapSlow<T>::HeapSort1(T *arr, int n) {
 }
 
 template <typename T>
-void MaxHeapSlow<T>::HeapSort2(T *arr, int n) {
-    MaxHeapSlow<T> maxHeap = MaxHeapSlow<T>(arr, n);
+void PriorityQueue<T>::HeapSort2(T *arr, int n) {
+    PriorityQueue<T> maxHeap = PriorityQueue<T>(arr, n);
     for (int j = n - 1; j >= 0; --j) {
         arr[j] = maxHeap.ExtractMax();
     }
 }
 
 template <typename T>
-MaxHeapSlow<T>::MaxHeapSlow(int capacity): capacity(capacity) {
+PriorityQueue<T>::PriorityQueue(int capacity): capacity(capacity) {
     currentSize = 0;
     arr = new T[capacity + 1];
 }
 
 template <typename T>
-MaxHeapSlow<T>::MaxHeapSlow(T *arr, int n): capacity(n) {
+PriorityQueue<T>::PriorityQueue(T *arr, int n): capacity(n) {
     this->arr = new T[capacity + 1];
     for (int i = 0; i < n; ++i) {
         this->arr[i+1] = arr[i];
@@ -71,12 +97,12 @@ MaxHeapSlow<T>::MaxHeapSlow(T *arr, int n): capacity(n) {
 }
 
 template <typename T>
-MaxHeapSlow<T>::~MaxHeapSlow() {
+PriorityQueue<T>::~PriorityQueue() {
     delete[] arr;
 }
 
 template <typename T>
-void MaxHeapSlow<T>::Insert(T item) {
+void PriorityQueue<T>::Insert(T item) {
     assert(currentSize + 1 <= capacity);
 
     arr[++currentSize] = item;
@@ -84,7 +110,7 @@ void MaxHeapSlow<T>::Insert(T item) {
 }
 
 template <typename T>
-void MaxHeapSlow<T>::ShiftUp(int k) {
+void PriorityQueue<T>::ShiftUp(int k) {
     while (k > 1 && arr[k/2] < arr[k]){
         swap(arr[k], arr[k/2]);
         k /= 2;
@@ -92,7 +118,7 @@ void MaxHeapSlow<T>::ShiftUp(int k) {
 }
 
 template <typename T>
-T MaxHeapSlow<T>::ExtractMax() {
+T PriorityQueue<T>::ExtractMax() {
     assert(currentSize != 0);
     T res = arr[1];
     arr[1] = arr[currentSize--];
@@ -101,12 +127,12 @@ T MaxHeapSlow<T>::ExtractMax() {
 }
 
 template <typename T>
-bool MaxHeapSlow<T>::IsEmpty() {
+bool PriorityQueue<T>::IsEmpty() {
     return currentSize == 0;
 }
 
 template <typename T>
-void MaxHeapSlow<T>::ShiftDown(int k) {
+void PriorityQueue<T>::ShiftDown(int k) {
     while (k * 2 <= currentSize) {
         int j = 2 * k;
         if (j + 1 <= currentSize && arr[j] < arr[j + 1]) {

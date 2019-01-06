@@ -8,7 +8,7 @@
 #include "sort/Quick.h"
 #include "sort/Bubble.h"
 #include "sort/Merge.h"
-#include "sort/MaxHeapSlow.h"
+#include "sort/PriorityQueue.h"
 #include "sort/Heap.h"
 
 
@@ -16,13 +16,13 @@ void test();
 void testSort();
 
 int main(){
-    testSort();
+    test();
     return 0;
 }
 
 void test() {
-    Heap<int> test;
-    test.testHeapSort();
+    PriorityQueue<int> test;
+    test.testPriorityQueue();
 }
 
 void testSort(){
@@ -39,8 +39,6 @@ void testSort(){
     int *arr7 = ArrayHelper::CopyArray(arr1, n);
     int *arr8 = ArrayHelper::CopyArray(arr1, n);
     int *arr9 = ArrayHelper::CopyArray(arr1, n);
-    int *arr10 = ArrayHelper::CopyArray(arr1, n);
-    int *arr11 = ArrayHelper::CopyArray(arr1, n);
 
     ArrayHelper::TestSort("SelectSort", Select<int>::SelectionSort, arr1, n);
     ArrayHelper::TestSort("InsertSort", Insert<int>::InsertSort, arr2, n);
@@ -50,9 +48,7 @@ void testSort(){
     ArrayHelper::TestSort("QuickSort1(Unbalanced)", Quick<int>::QuickSortI, arr6, n);
     ArrayHelper::TestSort("QuickSort2", Quick<int>::QuickSortII, arr7, n);
     ArrayHelper::TestSort("QuickSort3Ways", Quick<int>::QuickSort3Way, arr8, n);
-    ArrayHelper::TestSort("HeapSortSlow1", MaxHeapSlow<int>::HeapSort1, arr9, n);
-    ArrayHelper::TestSort("HeapSortSlow2", MaxHeapSlow<int>::HeapSort2, arr10, n);
-    ArrayHelper::TestSort("HeapSort", Heap<int>::HeapSort, arr11, n);
+    ArrayHelper::TestSort("HeapSort", Heap<int>::HeapSort, arr9, n);
     delete[] arr1;
     delete[] arr2;
     delete[] arr3;
@@ -62,8 +58,6 @@ void testSort(){
     delete[] arr7;
     delete[] arr8;
     delete[] arr9;
-    delete[] arr10;
-    delete[] arr11;
     cout<<endl;
 
 
@@ -78,8 +72,6 @@ void testSort(){
     arr7 = ArrayHelper::CopyArray(arr1, n);
     arr8 = ArrayHelper::CopyArray(arr1, n);
     arr9 = ArrayHelper::CopyArray(arr1, n);
-    arr10 = ArrayHelper::CopyArray(arr1, n);
-    arr11 = ArrayHelper::CopyArray(arr1, n);
 
     ArrayHelper::TestSort("SelectSort", Select<int>::SelectionSort, arr1, n);
     ArrayHelper::TestSort("InsertSort", Insert<int>::InsertSort, arr2, n);
@@ -89,9 +81,7 @@ void testSort(){
     ArrayHelper::TestSort("QuickSort1(Unbalanced)", Quick<int>::QuickSortI, arr6, n);
     ArrayHelper::TestSort("QuickSort2", Quick<int>::QuickSortII, arr7, n);
     ArrayHelper::TestSort("QuickSort3Ways", Quick<int>::QuickSort3Way, arr8, n);
-    ArrayHelper::TestSort("HeapSortSlow1", MaxHeapSlow<int>::HeapSort1, arr9, n);
-    ArrayHelper::TestSort("HeapSortSlow2", MaxHeapSlow<int>::HeapSort2, arr10, n);
-    ArrayHelper::TestSort("HeapSort", Heap<int>::HeapSort, arr11, n);
+    ArrayHelper::TestSort("HeapSort", Heap<int>::HeapSort, arr9, n);
     delete[] arr1;
     delete[] arr2;
     delete[] arr3;
@@ -101,8 +91,6 @@ void testSort(){
     delete[] arr7;
     delete[] arr8;
     delete[] arr9;
-    delete[] arr10;
-    delete[] arr11;
     cout<<endl;
 
 
@@ -117,8 +105,6 @@ void testSort(){
     arr7 = ArrayHelper::CopyArray(arr1, n);
     arr8 = ArrayHelper::CopyArray(arr1, n);
     arr9 = ArrayHelper::CopyArray(arr1, n);
-    arr10 = ArrayHelper::CopyArray(arr1, n);
-    arr11 = ArrayHelper::CopyArray(arr1, n);
 
 
     ArrayHelper::TestSort("SelectSort", Select<int>::SelectionSort, arr1, n);
@@ -129,9 +115,7 @@ void testSort(){
     ArrayHelper::TestSort("QuickSort1(Unbalanced)", Quick<int>::QuickSortI, arr6, n);
     ArrayHelper::TestSort("QuickSort2", Quick<int>::QuickSortII, arr7, n);
     ArrayHelper::TestSort("QuickSort3Ways", Quick<int>::QuickSort3Way, arr8, n);
-    ArrayHelper::TestSort("HeapSortSlow1", MaxHeapSlow<int>::HeapSort1, arr9, n);
-    ArrayHelper::TestSort("HeapSortSlow2", MaxHeapSlow<int>::HeapSort2, arr10, n);
-    ArrayHelper::TestSort("HeapSort", Heap<int>::HeapSort, arr11, n);
+    ArrayHelper::TestSort("HeapSort", Heap<int>::HeapSort, arr9, n);
     delete[] arr1;
     delete[] arr2;
     delete[] arr3;
@@ -141,8 +125,6 @@ void testSort(){
     delete[] arr7;
     delete[] arr8;
     delete[] arr9;
-    delete[] arr10;
-    delete[] arr11;
     cout<<endl;
 
 }
