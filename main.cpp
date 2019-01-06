@@ -23,7 +23,7 @@ int main(){
 }
 
 void test() {
-    PriorityQueueReverseIndex<int>::testPriorityQueueReverseIndex();
+    Merge<int>::testMerge();
 }
 
 void testSort(){
