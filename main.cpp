@@ -16,7 +16,7 @@ void test();
 void testSort();
 
 int main(){
-    test();
+    testSort();
     return 0;
 }
 
