@@ -11,18 +11,18 @@
 #include "sort/PriorityQueue.h"
 #include "sort/Heap.h"
 
+#include "advanced/PriorityQueueIndex.h"
 
 void test();
 void testSort();
 
 int main(){
-    testSort();
+    test();
     return 0;
 }
 
 void test() {
-    PriorityQueue<int> test;
-    test.testPriorityQueue();
+    PriorityQueueIndex<int>::testPriorityQueueIndex();
 }
 
 void testSort(){
