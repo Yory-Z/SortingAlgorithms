@@ -4,6 +4,8 @@
 
 /*
  * Priority Queue Index
+ * (This version just can insert in a time. it means you can not insert after extracting.
+ * Because when inserting a elements, the index would override the existent elements's index)
  * Optimising the priority queue
  * If the element of priority queue, it will causing much time when shifting elements.
  * But in Priority queue, we just need to shifting the index, not the elements.
@@ -71,6 +73,7 @@ template <typename T>
 void PriorityQueueIndex<T>::Insert(T item) {
     assert(currentSize < capacity);
 
+    //this index may be existent
     index[currentSize] = currentSize;
     arr[currentSize] = item;
     ShiftUp(currentSize);

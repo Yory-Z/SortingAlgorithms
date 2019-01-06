@@ -3,4 +3,4 @@ project(SortingAlgorithms)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(SortingAlgorithms main.cpp util/ArrayHelper.h sort/Bubble.h sort/Heap.h sort/Insert.h sort/PriorityQueue.h sort/Merge.h sort/Quick.h sort/Select.h sort/Shell.h advanced/PriorityQueueIndex.h util/HeapHelper.h)
+add_executable(SortingAlgorithms main.cpp util/ArrayHelper.h sort/Bubble.h sort/Heap.h sort/Insert.h sort/PriorityQueue.h sort/Merge.h sort/Quick.h sort/Select.h sort/Shell.h advanced/PriorityQueueIndex.h util/HeapHelper.h advanced/PriorityQueueReverseIndex.h)

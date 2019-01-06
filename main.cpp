@@ -12,6 +12,7 @@
 #include "sort/Heap.h"
 
 #include "advanced/PriorityQueueIndex.h"
+#include "advanced/PriorityQueueReverseIndex.h"
 
 void test();
 void testSort();
@@ -22,7 +23,7 @@ int main(){
 }
 
 void test() {
-    PriorityQueueIndex<int>::testPriorityQueueIndex();
+    PriorityQueueReverseIndex<int>::testPriorityQueueReverseIndex();
 }
 
 void testSort(){
