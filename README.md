@@ -100,5 +100,5 @@ When sorting, it will must change two elements' index. Now, we should save the e
 <br/>
 <strong>
   See more analyses:<br/>
-  http://note.youdao.com/noteshare?id=afa74cc3942c8e00e6d31304cac2e069&sub=E7A44982BC064D0AAF3FD632A5DE309A
+  http://note.youdao.com/noteshare?id=c9bd03f95575061c12dc8686a72dc4f0&sub=4904D9DB001F4DBA9015E29E0876B9FB
 </strong>
