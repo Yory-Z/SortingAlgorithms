@@ -93,8 +93,11 @@ QuickSort3Ways : 0.005 S<br/>
 HeapSort : 0.018 S<br/>
 <br/>
 <h3>Summary:</h3><br/>
-Accoring to the analysis above, the most common used sorting algorithms is quick sort(3 ways).<br/>
-
+<p>Accoring to the analysis above, the most common used sorting algorithms is quick sort(3 ways).</p>
+<p>When the elements need to be sorted is almost ordered,  the insertion sort is the fastest algorithm.</p>
+<p>When using merge sort or quick sort and the number of elements need to be sorted is small, then it would be faster when using insertion sort to sort the rest elements.</p>
+<p>When sorting, it will must change two elements' index. Now, we should save the element whcih need to change the index, when finding the correct index for element, we can use overriding instead of swapping. After we found the correct index, we just place the element need to chang to the found index. This way will cut down much time cause.</p>
+<br/>
 <strong>
   See more analyses:<br/>
   http://note.youdao.com/noteshare?id=afa74cc3942c8e00e6d31304cac2e069&sub=E7A44982BC064D0AAF3FD632A5DE309A
