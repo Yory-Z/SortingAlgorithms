@@ -36,7 +36,7 @@ void Quick<T>::testQuickSort() {
     ArrayHelper::PrintArray(arr, n);
 }
 
-//quick sort two
+//quick sort three
 template <class T>
 void Quick<T>::QuickSort3Way(T* arr, int n) {
     srand(time(NULL));
