@@ -11,13 +11,13 @@ using namespace ArrayHelper;
 template <class T>
 class Shell{
 public:
-    void testShell();
+    void test();
     static void ShellSort(T* arr, int n);
 
 };
 
 template <class T>
-void Shell<T>::testShell() {
+void Shell<T>::test() {
 
     int sum = 9;
     int *arr = ArrayHelper::GenerateUnorderArray(sum, 0, sum);

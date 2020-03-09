@@ -11,12 +11,12 @@ using namespace ArrayHelper;
 template <class T>
 class Select {
 public:
-    void testSelectionSort();
+    void test();
     static void SelectionSort(T* arr, int n);
 };
 
 template <class T>
-void Select<T>::testSelectionSort() {
+void Select<T>::test() {
     int n = 10;
     int *arr = ArrayHelper::GenerateUnorderArray(n, 0, n);
     ArrayHelper::PrintArray(arr, n);
@@ -35,7 +35,7 @@ void Select<T>::SelectionSort(T *arr, int n) {
             }
         }
         //if the minimum index minIndex is not the first index i
-        //then swap then
+        //then swap them
         if (minIndex != i){
             swap(arr[i], arr[minIndex]);
         }

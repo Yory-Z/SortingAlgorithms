@@ -12,7 +12,7 @@ using namespace ArrayHelper;
 template <class T>
 class Quick{
 public:
-    void testQuickSort();
+    void test();
     static void QuickSortI(T* arr, int n);
     static void QuickSortII(T* arr, int n);
     static void QuickSort3Way(T* arr, int n);
@@ -28,11 +28,11 @@ private:
 };
 
 template <class T>
-void Quick<T>::testQuickSort() {
+void Quick<T>::test() {
     int n = 10;
     int *arr = ArrayHelper::GenerateUnorderArray(n, 0, n);
     ArrayHelper::PrintArray(arr, n);
-    QuickSortI(arr, n);
+    QuickSort3Way(arr, n);
     ArrayHelper::PrintArray(arr, n);
 }
 
@@ -45,10 +45,13 @@ void Quick<T>::QuickSort3Way(T* arr, int n) {
 
 template <class T>
 void Quick<T>::QuickSort3Way(T *arr, int left, int right) {
-    if (right - left <= 15){
-        Insert<T>::InsertSort(arr, left, right);
+    if (left >= right) {
         return;
     }
+/*    if (right - left <= 15){
+        Insert<T>::InsertSort(arr, left, right);
+        return;
+    }*/
 
     swap(arr[left], arr[rand() % (right - left + 1) + left]);
     T target = arr[left];
@@ -86,10 +89,14 @@ void Quick<T>::QuickSortII(T* arr, int n) {
 
 template <class T>
 void Quick<T>::QuickSortII(T *arr, int left, int right) {
-    if (right - left <= 15){
-        Insert<T>::InsertSort(arr, left, right);
+    if (left >= right) {
         return;
     }
+
+/*    if (right - left <= 15){
+        Insert<T>::InsertSort(arr, left, right);
+        return;
+    }*/
 
     int middle = PartitionII(arr, left, right);
     QuickSortII(arr, left, middle - 1);
@@ -134,16 +141,16 @@ void Quick<T>::QuickSortI(T* arr, int n) {
 
 template <class T>
 void Quick<T>::QuickSortI(T *arr, int left, int right) {
-/*    if (left >= right){
+    if (left >= right){
         return;
-    }*/
+    }
 
     //optimise, when the elements need to be sorted less than 15(or others value)
     //use Insert Sort will be better, cause less time
-    if (right - left <= 15){
+/*    if (right - left <= 15){
         Insert<T>::InsertSort(arr, left, right);
         return;
-    }
+    }*/
 
     int middle = PartitionI(arr, left, right);
     //sort the first part of the array

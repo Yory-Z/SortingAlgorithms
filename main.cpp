@@ -23,7 +23,9 @@ int main(){
 }
 
 void test() {
-    Merge<int>::testMerge();
+
+    PriorityQueueIndex<int> test;
+    test.test();
 }
 
 void testSort(){

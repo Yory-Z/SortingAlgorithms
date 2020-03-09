@@ -12,14 +12,14 @@ using namespace ArrayHelper;
 template <class T>
 class Insert {
 public:
-    void testInsert();
+    void test();
     static void InsertSort(T* arr, int n);
     static void InsertSortSlow(T* arr, int n);
     static void InsertSort(T* arr, int left, int right);
 };
 
 template <class T>
-void Insert<T>::testInsert() {
+void Insert<T>::test() {
     int n = 10;
     int *arr = ArrayHelper::GenerateUnorderArray(n, 0, n);
     int *arr2 = ArrayHelper::CopyArray(arr, n);

@@ -11,12 +11,12 @@
 template <class T>
 class Bubble {
 public:
-    void testBubble();
+    void test();
     static void BubbleSort(T* arr, int n);
 };
 
 template <class T>
-void Bubble<T>::testBubble() {
+void Bubble<T>::test() {
     int n = 10;
     int *arr = ArrayHelper::GenerateUnorderArray(n, 0, n);
     ArrayHelper::PrintArray(arr, n);

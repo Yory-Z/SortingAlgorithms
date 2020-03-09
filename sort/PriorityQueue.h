@@ -19,7 +19,7 @@
 template <typename T>
 class PriorityQueue {
 public:
-    void testPriorityQueue();
+    void test();
     void HeapSort1(T* arr, int n);
     void HeapSort2(T* arr, int n);
 
@@ -40,8 +40,8 @@ private:
 };
 
 template <typename T>
-void PriorityQueue<T>::testPriorityQueue() {
-    int n = 10;
+void PriorityQueue<T>::test() {
+    int n = 20;
     srand(time(NULL));
     PriorityQueue<T> queue = PriorityQueue<T>(n);
     for (int i = 0; i < n; ++i) {

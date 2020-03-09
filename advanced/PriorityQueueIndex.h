@@ -8,7 +8,7 @@
  * Because when inserting a elements, the index would override the existent elements's index)
  * Optimising the priority queue
  * If the element of priority queue, it will causing much time when shifting elements.
- * But in Priority queue, we just need to shifting the index, not the elements.
+ * But in Priority queue index, we just need to shifting the index, not the elements.
  * */
 
 #ifndef SORTINGALGORITHMS_HEAPINDEX_H
@@ -21,7 +21,7 @@
 template <typename T>
 class PriorityQueueIndex {
 public:
-    static void testPriorityQueueIndex();
+    static void test();
     PriorityQueueIndex(int capacity = 100);
     ~PriorityQueueIndex();
 
@@ -39,7 +39,7 @@ private:
 };
 
 template <typename T>
-void PriorityQueueIndex<T>::testPriorityQueueIndex() {
+void PriorityQueueIndex<T>::test() {
     int n = 10;
     PriorityQueueIndex<T> queue = PriorityQueueIndex<T>(n);
     srand(time(NULL));
@@ -54,7 +54,6 @@ void PriorityQueueIndex<T>::testPriorityQueueIndex() {
         cout<<queue.ExtractMax()<<' ';
     }
     cout<<endl;
-
 }
 
 template <typename T>

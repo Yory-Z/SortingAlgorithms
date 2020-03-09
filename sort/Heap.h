@@ -11,7 +11,7 @@
 template <class T>
 class Heap {
 public:
-    void testHeapSort();
+    void test();
     static void HeapSort(T *arr, const int n);
 
 private:
@@ -19,8 +19,8 @@ private:
 };
 
 template <class T>
-void Heap<T>::testHeapSort() {
-    int n = 10;
+void Heap<T>::test() {
+    int n = 30;
     int *arr = ArrayHelper::GenerateUnorderArray(n, 0, n);
     ArrayHelper::PrintArray(arr, n);
     HeapSort(arr, n);

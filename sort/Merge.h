@@ -12,7 +12,7 @@ using namespace ArrayHelper;
 template <class T>
 class Merge {
 public:
-    static void testMerge();
+    static void test();
     static void MergeSort(T* arr, int n);
     static void MergerSortBottomUp(T* arr, int n);
 
@@ -22,17 +22,12 @@ private:
 };
 
 template <class T>
-void Merge<T>::testMerge() {
+void Merge<T>::test() {
     int n = 10;
     int* arr = ArrayHelper::GenerateUnorderArray(n, 0, n);
     ArrayHelper::PrintArray(arr, n);
     MergeSort(arr, n);
     ArrayHelper::PrintArray(arr, n);
-}
-
-template <class T>
-void Merge<T>::MergeSort(T *arr, int n) {
-    MergeSort(arr, 0, n-1);
 }
 
 template <class T>
@@ -51,15 +46,20 @@ void Merge<T>::MergerSortBottomUp(T *arr, int n) {
 }
 
 template <class T>
+void Merge<T>::MergeSort(T *arr, int n) {
+    MergeSort(arr, 0, n-1);
+}
+
+template <class T>
 void Merge<T>::MergeSort(T *arr, int left, int right) {
-/*    if (left >= right)
-        return;*/
+    if (left >= right)
+        return;
 
     //optimise
-    if (right - left <= 15){
+/*    if (right - left <= 15){
         Insert<T>::InsertSort(arr, left, right);
         return;
-    }
+    }*/
 
     //divide the array into two arrays
     //int mid = (left + right) / 2;// this will cause memory leak
